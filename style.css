@@ -1,0 +1,162 @@
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(68, 68, 68);
+  background: #fff;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Layout ── */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+.two-col { display: flex; gap: 40px; align-items: flex-start; }
+.two-col > * { flex: 1; }
+
+/* ── Sections ── */
+.section { padding: 95px 0; }
+.section-hero {
+  padding: 0;
+  background-image: linear-gradient(40deg, rgb(248, 195, 208) 10%, rgb(255, 255, 255) 30%);
+}
+.section-hero .container { padding-top: 95px; padding-bottom: 95px; min-height: 729px; display: flex; align-items: center; }
+.section-processo {
+  background-image: linear-gradient(120deg, rgb(248, 195, 208) 10%, rgb(255, 255, 255) 30%);
+}
+
+/* ── Divider ── */
+.divider {
+  width: 105px;
+  height: 1px;
+  background: rgb(33, 33, 33);
+  margin: 0 0 28px;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 { margin: 0 0 16px; }
+h1 {
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 78px;
+  color: rgb(228, 157, 174);
+}
+h2 {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 66px;
+  color: rgb(33, 33, 33);
+}
+h3 {
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 78px;
+  color: rgb(248, 195, 208);
+}
+h4 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: rgb(28, 36, 75);
+}
+p {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: rgb(34, 34, 34);
+}
+ul { padding-left: 20px; margin: 0 0 16px; }
+li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; color: rgb(34, 34, 34); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: rgb(70, 127, 247);
+  color: rgb(255, 255, 255);
+  border-radius: 110px;
+  padding: 16px 55px;
+  font-size: 16px;
+}
+.btn-exaluna {
+  background: rgb(253, 159, 234);
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 15px 65px;
+  font-size: 15px;
+}
+.btn-diario {
+  background: rgb(248, 195, 208);
+  color: rgb(0, 0, 0);
+  border-radius: 100px;
+  padding: 16px 55px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.btn-inscrever {
+  background: rgb(70, 127, 247);
+  color: rgb(255, 255, 255);
+  border-radius: 110px;
+  padding: 16px 55px;
+  font-size: 15px;
+}
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+/* ── Hero images grid ── */
+.hero-images { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.hero-images img { width: 100%; object-fit: cover; aspect-ratio: 3/4; }
+
+/* ── Info items ── */
+.info-item { font-size: 18px; font-weight: 500; line-height: 27px; color: rgb(34, 34, 34); margin-bottom: 12px; }
+.info-note { font-size: 16px; margin: 16px 0; }
+.info-note strong { display: block; color: rgb(34, 34, 34); }
+
+/* ── Price ── */
+.price { font-size: 36px; font-weight: 600; color: rgb(33, 33, 33); margin-bottom: 4px; }
+.price-installment { font-size: 15px; color: rgb(68, 68, 68); margin-bottom: 24px; }
+
+/* ── Feature cards ── */
+.cards { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
+.cards p { font-size: 18px; }
+
+/* ── Quote ── */
+.quote-text {
+  font-size: 57.6px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgb(33, 33, 33);
+  margin: 0;
+}
+
+/* ── Brinde specs ── */
+.specs { font-size: 15px; border-top: 1px solid rgb(68, 68, 68); padding-top: 12px; margin-top: 12px; }
+.specs p { font-size: 15px; margin-bottom: 4px; color: rgb(68, 68, 68); }
+
+/* ── Photo grid ── */
+.photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.photo-grid img { width: 100%; object-fit: cover; aspect-ratio: 3/4; }
+
+/* ── Lesson list ── */
+.lesson-list { display: flex; flex-direction: column; gap: 24px; }
+.lesson { border-bottom: 1px solid rgba(28, 36, 75, 0.15); padding-bottom: 20px; }
+.lesson:last-child { border-bottom: none; }
+.lesson p { font-size: 16px; color: rgb(68, 68, 68); margin-top: 6px; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .two-col { flex-direction: column; }
+  h1, h3 { font-size: 42px; line-height: 1.2; }
+  h2 { font-size: 36px; line-height: 1.2; }
+  .quote-text { font-size: 32px; }
+  .section { padding: 60px 0; }
+  .section-hero .container { padding-top: 60px; padding-bottom: 60px; min-height: auto; }
+  .container { padding: 0 24px; }
+}
