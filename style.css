@@ -26,6 +26,96 @@ a { color: inherit; text-decoration: none; }
   background-image: linear-gradient(120deg, rgb(248, 195, 208) 10%, rgb(255, 255, 255) 30%);
 }
 
+/* ── Hero Header ── */
+.section-hero-header {
+  position: relative;
+  min-height: 600px;
+  background: url('images/banner-lp-curso.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.section-hero-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0.75) 100%);
+}
+.hero-header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  padding: 60px 80px 40px 40px;
+  color: #fff;
+}
+.hero-header-label {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+.hero-header-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 24px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.hero-header-title .underline {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+.hero-header-subtitle {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 32px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.hero-header-subtitle sup {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+.highlight {
+  background: rgb(253, 159, 234);
+  color: #fff;
+  padding: 2px 6px;
+  font-style: italic;
+}
+.hero-header-dates {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(253, 159, 234);
+  margin-bottom: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.4;
+}
+.hero-header-urgency {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.hero-header-urgency .underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+.hero-header-note {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+
 /* ── Divider ── */
 .divider {
   width: 105px;
@@ -157,6 +247,10 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
   h2 { font-size: 36px; line-height: 1.2; }
   .quote-text { font-size: 32px; }
   .section { padding: 60px 0; }
+  .section-hero-header { min-height: 400px; }
+  .hero-header-content { padding: 40px 24px; max-width: 100%; }
+  .hero-header-title { font-size: 42px; }
+  .hero-header-subtitle { font-size: 28px; }
   .section-hero .container { padding-top: 60px; padding-bottom: 60px; min-height: auto; }
   .container { padding: 0 24px; }
 }
