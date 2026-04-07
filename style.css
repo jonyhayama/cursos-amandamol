@@ -283,7 +283,7 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
 
 /* ── Quote ── */
 .quote-text {
-  font-size: 57.6px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1.2;
   color: rgb(33, 33, 33);
@@ -303,6 +303,14 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
 .lesson { border-bottom: 1px solid rgba(28, 36, 75, 0.15); padding-bottom: 20px; }
 .lesson:last-child { border-bottom: none; }
 .lesson p { font-size: 16px; color: rgb(68, 68, 68); margin-top: 6px; }
+
+.section-processo {
+  padding-bottom: 0;
+}
+.section-processo h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
