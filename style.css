@@ -293,9 +293,59 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
 .specs { font-size: 15px; border-top: 1px solid rgb(68, 68, 68); padding-top: 12px; margin-top: 12px; }
 .specs p { font-size: 15px; margin-bottom: 4px; color: rgb(68, 68, 68); }
 
-/* ── Photo grid ── */
-.photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.photo-grid img { width: 100%; object-fit: cover; aspect-ratio: 3/4; }
+/* ── Photo carousel ── */
+.photo-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+.carousel-btn:hover { background: #fff; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0 4px;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(33,33,33,0.25);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carousel-dot.active { background: rgb(253, 159, 234); }
 
 /* ── Lesson list ── */
 .lesson-list { display: flex; flex-direction: column; gap: 24px; }

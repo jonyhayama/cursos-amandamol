@@ -135,14 +135,24 @@
   <!-- ═══════════════ GALERIA + DEPOIMENTOS ═══════════════ -->
   <section class="section">
     <div class="container">
-      <div class="two-col">
+      <div class="two-col" style="align-items: center;">
 
         <div>
-          <div class="photo-grid">
-            <img src="images/Leticia_Faria-2-768x1024.jpg" alt="">
-            <img src="images/Maisa-Flora-768x1024.jpg" alt="">
-            <img src="images/Leticia_Faria-2-3-768x1024.jpg" alt="">
-            <img src="images/Nanda-Buono-768x1024.jpg" alt="">
+          <div class="photo-carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/Leticia_Faria-2-768x1024.jpg" alt=""></div>
+              <div class="carousel-slide"><img src="images/Maisa-Flora-768x1024.jpg" alt=""></div>
+              <div class="carousel-slide"><img src="images/Leticia_Faria-2-3-768x1024.jpg" alt=""></div>
+              <div class="carousel-slide"><img src="images/Nanda-Buono-768x1024.jpg" alt=""></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Anterior"><img src="images/left-arrow.svg" alt="Anterior"></button>
+            <button class="carousel-btn carousel-next" aria-label="Próxima"><img src="images/right-arrow.svg" alt="Próxima"></button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
           </div>
         </div>
 
@@ -218,6 +228,25 @@
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.photo-carousel').forEach(function(carousel) {
+      var track = carousel.querySelector('.carousel-track');
+      var dots = carousel.querySelectorAll('.carousel-dot');
+      var total = dots.length;
+      var current = 0;
+
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+      }
+
+      carousel.querySelector('.carousel-prev').addEventListener('click', function() { goTo(current - 1); });
+      carousel.querySelector('.carousel-next').addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(i); }); });
+    });
+  </script>
 
   <!-- == HIDDEN PAYPAL BUTTON == -->
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display:none">
