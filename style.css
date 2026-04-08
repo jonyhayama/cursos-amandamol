@@ -33,7 +33,7 @@ section:nth-of-type(odd):not(:first-of-type) {
 /* ── Hero Header ── */
 .section-hero-header {
   position: relative;
-  min-height: 600px;
+  min-height: 75vh;
   background: url('images/banner-lp-curso.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -361,6 +361,34 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
   line-height: 1.2;
 }
 
+/* ── Footer ── */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  background: rgb(33, 33, 33);
+  color: rgb(253, 159, 234);
+  font-size: 14px;
+}
+.site-footer > a {
+  color: rgb(253, 159, 234);
+}
+.site-footer > a:hover { color: #fff; }
+.footer-icons {
+  display: flex;
+  gap: 24px;
+}
+.footer-icons a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgb(253, 159, 234);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.footer-icons a:hover { color: #fff; }
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .two-col { flex-direction: column; }
@@ -368,7 +396,7 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
   h2 { font-size: 36px; line-height: 1.2; }
   .quote-text { font-size: 32px; }
   .section { padding: 60px 0; }
-  .section-hero-header { min-height: 400px; }
+  .section-hero-header { min-height: 60vh; }
   .hero-header-content { padding: 40px 24px; max-width: 100%; }
   .hero-header-title { font-size: 42px; }
   .hero-header-subtitle { font-size: 28px; }
