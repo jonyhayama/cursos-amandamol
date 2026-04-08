@@ -49,7 +49,6 @@ section:nth-of-type(odd):not(:first-of-type) {
 .hero-header-content {
   position: relative;
   z-index: 1;
-  max-width: 620px;
   padding: 60px 80px 40px 40px;
   color: #fff;
 }
@@ -270,7 +269,7 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
 
 /* ── Info items ── */
 .info-item { font-size: 18px; font-weight: 500; line-height: 27px; color: rgb(34, 34, 34); margin-bottom: 12px; }
-.info-note { font-size: 16px; margin: 16px 0; }
+.info-note { font-size: 18px; margin: 18px 0; }
 .info-note strong { display: block; color: rgb(34, 34, 34); }
 
 /* ── Price ── */
