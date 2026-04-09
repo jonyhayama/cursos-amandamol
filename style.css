@@ -354,7 +354,7 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
 .lesson p { font-size: 16px; color: rgb(68, 68, 68); margin-top: 6px; }
 
 .section-processo {
-  padding-bottom: 0;
+  padding-bottom: 32px;
 }
 .section-processo h2 {
   font-size: 32px;
@@ -368,13 +368,13 @@ li { margin-bottom: 10px; font-size: 18px; font-weight: 500; line-height: 27px; 
   justify-content: space-between;
   padding: 30px 40px;
   background: rgb(33, 33, 33);
-  color: rgb(253, 159, 234);
+  color: #fff;
   font-size: 14px;
 }
-.site-footer > a {
+.site-footer > div > a {
   color: rgb(253, 159, 234);
 }
-.site-footer > a:hover { color: #fff; }
+.site-footer > div > a:hover { color: #fff; }
 .footer-icons {
   display: flex;
   gap: 24px;
